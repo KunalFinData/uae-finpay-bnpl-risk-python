@@ -1,52 +1,39 @@
-# \# UAE FinPay BNPL Default Risk Predictor \& Expected Loss Model
+ \# UAE FinPay BNPL Default Risk Predictor \& Expected Loss Model
 
-# 
+ 
 
-# \## Business Problem
+ \## Business Problem
 
-# UAE FinPay's BNPL product faces rising default risk across
+ UAE FinPay's BNPL product faces rising default risk across
 
-# customer segments in Dubai, Abu Dhabi, and Sharjah. This
+ customer segments in Dubai, Abu Dhabi, and Sharjah. This
 
-# project builds a predictive default model, calculates
+ project builds a predictive default model, calculates
 
-# Expected Loss in AED by risk tier, and simulates an A/B
+ Expected Loss in AED by risk tier, and simulates an A/B
 
-# test on feature engineering to guide underwriting decisions.
+ test on feature engineering to guide underwriting decisions.
 
-# 
 
-\## Data Lineage
+#Data Lineage
+
+```
 Raw Layer (BNPL Dataset — Kaggle, Bhanage, 50,000 rows)
-===
-
-# ↓
-
-# UAE Staging Layer (AED conversion, emirate, credit risk tier)
-
-# ↓
-
-# Feature Engineering (encoding, risk scoring)
-
-# ↓
-
-# Model Training (Logistic Regression vs Random Forest)
-
-# ↓
-
-# Expected Loss (PD × LGD × EAD in AED by risk tier)
-
-# ↓
-
-# A/B Test (credit score feature impact on AUC-ROC)
-
-# ↓
-
-# Net Customer Value (LTV minus Expected Loss)
-
-# ↓
-
-# GitHub (notebook, charts, compliance docs)
+↓
+UAE Staging Layer (AED conversion, emirate, credit risk tier)
+↓
+Feature Engineering (encoding, risk scoring)
+↓
+Model Training (Logistic Regression vs Random Forest)
+↓
+Expected Loss (PD × LGD × EAD in AED by risk tier)
+↓
+A/B Test (credit score feature impact on AUC-ROC)
+↓
+Net Customer Value (LTV minus Expected Loss)
+↓
+GitHub (notebook, charts, compliance docs)
+```
 
 
 
