@@ -1,6 +1,6 @@
 \# Regulatory Compliance Framework
 
-\## UAE FinPay — Project 1
+\## UAE FinPay — Project 2
 
 
 
@@ -36,17 +36,17 @@ SAR/STR thresholds per CBUAE 2026 guidance.
 
 
 
-\### Behavior-Based Detection Applied in This Project
+\### Compliance Applied in This Project
 
-\- Structuring patterns: multiple sub-threshold transactions
+\- Expected Loss modeling aligned with CBUAE credit risk guidance
 
-&#x20; designed to avoid detection
+\- Consumer Protection: BNPL tenure maximum 36 months per
 
-\- Velocity anomalies: sudden spike vs 90-day customer baseline
+&#x20; Cabinet Resolution No.134/2025
 
-\- Dormant account reactivation with unusual high-value activity
+\- PDPL data minimisation applied to customer financial data
 
-\- KYC failures and pending verification flags
+\- Internal escalation flags for operational monitoring only
 
 
 
