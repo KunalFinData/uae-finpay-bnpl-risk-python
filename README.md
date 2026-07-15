@@ -38,6 +38,25 @@ Net Customer Value (LTV minus Expected Loss)
 ↓
 GitHub (notebook, charts, compliance docs)
 
+---
+
+## Data Lineage
+
+Raw Layer (BNPL Dataset — Kaggle, Bhanage, 50,000 rows)
+↓
+UAE Staging Layer (AED conversion, emirate, credit risk tier)
+↓
+Feature Engineering (encoding, risk scoring)
+↓
+Model Training (Logistic Regression vs Random Forest)
+↓
+Expected Loss (PD × LGD × EAD in AED by risk tier)
+↓
+A/B Test (credit score feature impact on AUC-ROC)
+↓
+Net Customer Value (LTV minus Expected Loss)
+↓
+GitHub (notebook, charts, compliance docs)
 
 ---
 
