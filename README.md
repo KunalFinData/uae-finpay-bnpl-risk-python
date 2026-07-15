@@ -94,6 +94,7 @@ GitHub (notebook, charts, compliance docs)
 
 ## Project Structure
 
+```
 uae-finpay-bnpl-risk-python/
 ├── README.md
 ├── COMPLIANCE_CREDIT_RISK.md
@@ -102,10 +103,11 @@ uae-finpay-bnpl-risk-python/
 ├── notebooks/
 │   └── uae_finpay_bnpl_risk_analysis.ipynb
 └── charts/
-├── 01_eda_overview.png
-├── 02_model_comparison.png
-├── 03_expected_loss_by_tier.png
-└── 04_feature_importance.png
+    ├── 01_eda_overview.png
+    ├── 02_model_comparison.png
+    ├── 03_expected_loss_by_tier.png
+    └── 04_feature_importance.png
+```
 
 ---
 
