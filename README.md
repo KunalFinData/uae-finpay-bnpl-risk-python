@@ -105,7 +105,6 @@ uae-finpay-bnpl-risk-python/
 ├── 03_expected_loss_by_tier.png
 └── 04_feature_importance.png
 
-
 ---
 
 ## Data Quality
@@ -137,10 +136,11 @@ See [`COMPLIANCE_CREDIT_RISK.md`](COMPLIANCE_CREDIT_RISK.md) for full CBUAE 2026
 ![Model Comparison](charts/02_model_comparison.png)
 
 ### 3. Expected Loss by Risk Tier (AED)
-![Expected Loss](charts/03_expected_loss_by_tier.png)
+![Expected Loss by Tier](charts/03_expected_loss_by_tier.png)
 
 ### 4. Feature Importance (Top 10 Drivers)
 ![Feature Importance](charts/04_feature_importance.png)
+
 
 ---
 
