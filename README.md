@@ -22,6 +22,7 @@ UAE FinPay's BNPL product faces rising default risk across customer segments in 
 
 ## Data Lineage
 
+```
 Raw Layer (BNPL Dataset — Kaggle, Bhanage, 50,000 rows)
 ↓
 UAE Staging Layer (AED conversion, emirate, credit risk tier)
@@ -37,6 +38,7 @@ A/B Test (credit score feature impact on AUC-ROC)
 Net Customer Value (LTV minus Expected Loss)
 ↓
 GitHub (notebook, charts, compliance docs)
+```
 
 
 ---
