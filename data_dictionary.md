@@ -1,6 +1,14 @@
 \# Data Dictionary — UAE FinPay
 
-\## Shared Across All 7 UAE FinPay Projects
+\## Project 2: BNPL Default Risk Predictor \& Expected Loss Model
+
+
+
+\---
+
+
+
+\## Core Customer \& Credit Fields
 
 
 
@@ -8,77 +16,169 @@
 
 |-------|------|-------------|
 
-| transaction\_id | VARCHAR | Unique transaction ID — TXN\_UAE\_\[ID] |
+| customer\_id | VARCHAR | Unique customer ID — format: UAE\_CUST\_\[ID] |
 
-| customer\_id | VARCHAR | Unique customer ID — UAE\_CUST\_\[ID] |
+| transaction\_date | TIMESTAMP | Date of BNPL transaction (UTC+4, UAE local time) |
 
-| transaction\_date | TIMESTAMP | Date and time of transaction |
+| amount\_aed | DECIMAL | BNPL purchase amount in UAE Dirhams (AED) |
 
-| amount\_aed | DECIMAL | Transaction amount in UAE Dirhams |
-
-| emirate | VARCHAR | UAE emirate — Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah |
+| emirate | VARCHAR | UAE emirate — Dubai, Abu Dhabi, Sharjah, Ajman |
 
 | kyc\_status | VARCHAR | KYC verification status — verified, pending, rejected |
 
-| payment\_channel | VARCHAR | Payment method — card, wallet, bank\_transfer |
+| credit\_score | INTEGER | Customer credit score on 300-850 scale |
 
-| merchant\_category | VARCHAR | Merchant type — retail, ecommerce, food\_beverage, transport, electronics, travel |
+| annual\_income\_aed | DECIMAL | Customer annual income converted to AED (USD x 3.67) |
 
-| is\_fraud | INTEGER | Fraud label — 1 = fraud, 0 = legitimate |
+| purchase\_amount\_aed | DECIMAL | BNPL purchase amount converted to AED (USD x 3.67) |
 
-| internal\_escalation\_40k | INTEGER | Operational monitoring flag for transactions above AED 40,000 |
+| purchase\_category | VARCHAR | Product category — Beauty, Groceries, Travel, Electronics etc |
 
-| internal\_escalation\_100k | INTEGER | Operational monitoring flag for transactions above AED 100,000 |
+| bnpl\_provider | VARCHAR | BNPL provider — Sezzle, Affirm etc |
 
-| product\_type | VARCHAR | Product category from source data |
-
-| card\_network | VARCHAR | Card network — visa, mastercard, discover, amex |
-
-| email\_domain | VARCHAR | Customer email domain |
-
-| risk\_score | INTEGER | Customer risk score 0-100. Derived from fraud rate and KYC status |
-
-| risk\_tier | VARCHAR | Risk classification — HIGH, MEDIUM, LOW |
-
-| activity\_tier | VARCHAR | Transaction frequency — HIGH\_ACTIVITY, MEDIUM\_ACTIVITY, LOW\_ACTIVITY |
-
-| value\_tier | VARCHAR | Spend level — HIGH\_VALUE, MEDIUM\_VALUE, LOW\_VALUE |
+| gender | VARCHAR | Customer gender — Male, Female, Non-Binary |
 
 
 
-\## Critical Note on Escalation Flags
-
-internal\_escalation\_40k and internal\_escalation\_100k are
-
-INTERNAL OPERATIONAL MONITORING TRIGGERS only.
+\---
 
 
 
-CBUAE SAR/STR filing has NO monetary threshold as of June 2026.
-
-Reporting is triggered by reasonable suspicion per Federal
-
-Decree-Law No.(10) of 2025 and Cabinet Resolution No.(134) of 2025.
+\## BNPL Credit Risk Fields
 
 
 
-A transaction of AED 1 is as reportable as AED 10,000,000
+| Field | Type | Description |
 
-if reasonable suspicion exists.
+|-------|------|-------------|
+
+| default\_flag | INTEGER | Default label — 1 = defaulted, 0 = paid on time |
+
+| repayment\_status | VARCHAR | Raw repayment status — Defaulted or Paid On Time |
+
+| credit\_risk\_tier | VARCHAR | Credit tier from credit score — HIGH\_RISK (below 580), MEDIUM\_RISK (580-670), LOW\_RISK (670-740), VERY\_LOW\_RISK (above 740) |
 
 
 
-\## Risk Score Calculation
+\---
 
-\- Score 0-100 derived from customer fraud rate percentage
 
-\- KYC rejected adds 10 points
 
-\- KYC pending adds 5 points
+\## Expected Loss Fields
 
-\- HIGH risk: score above 70 or KYC rejected
 
-\- MEDIUM risk: score 40-70 or KYC pending
 
-\- LOW risk: score below 40 with verified KYC
+| Field | Type | Description |
+
+|-------|------|-------------|
+
+| pd\_score | DECIMAL | Probability of Default — model output between 0 and 1 |
+
+| ead | DECIMAL | Exposure at Default — purchase amount in AED |
+
+| lgd | DECIMAL | Loss Given Default — fixed at 0.65 (65%) for unsecured BNPL |
+
+| expected\_loss\_aed | DECIMAL | Expected Loss = PD x LGD x EAD calculated in AED |
+
+| pd\_risk\_tier | VARCHAR | Risk tier from PD score — LOW\_RISK (0-20%), MEDIUM\_RISK (20-40%), HIGH\_RISK (40-60%), VERY\_HIGH\_RISK (above 60%) |
+
+| ltv\_aed | DECIMAL | Customer Lifetime Value proxy in AED |
+
+| net\_customer\_value\_aed | DECIMAL | LTV minus Expected Loss — profitability metric |
+
+
+
+\---
+
+
+
+\## Model Performance Fields
+
+
+
+| Field | Type | Description |
+
+|-------|------|-------------|
+
+| auc\_roc | DECIMAL | Area Under ROC Curve — model discrimination ability |
+
+| precision | DECIMAL | True positives divided by total predicted positives |
+
+| recall | DECIMAL | True positives divided by total actual positives |
+
+| f1\_score | DECIMAL | Harmonic mean of precision and recall |
+
+| feature\_importance | DECIMAL | Random Forest feature importance score 0-1 |
+
+
+
+\---
+
+
+
+\## Expected Loss Calculation
+
+
+
+Expected Loss (EL) = PD x LGD x EAD
+
+Where:
+
+PD  = Probability of Default (model output, 0-1 scale)
+
+LGD = Loss Given Default (65% for unsecured BNPL)
+
+EAD = Exposure at Default (purchase\_amount\_aed)
+
+Example:
+
+Customer A: PD = 0.08, LGD = 0.65, EAD = AED 2,000
+
+Expected Loss = 0.08 x 0.65 x 2,000 = AED 104
+
+
+
+\---
+
+
+
+\## CBUAE Compliance Notes
+
+
+
+\- Maximum BNPL tenure: 36 months per Cabinet Resolution No.134/2025
+
+\- Affordability assessment applied using credit score and income fields
+
+\- AECB reporting triggered for customers with 30+ days past due
+
+\- PDPL data minimisation applied — no sensitive personal identifiers stored
+
+
+
+For full regulatory context see COMPLIANCE\_CREDIT\_RISK.md
+
+
+
+\---
+
+
+
+\## Data Lineage Reference
+
+
+
+\- README.md — Project overview and methodology
+
+\- COMPLIANCE\_CREDIT\_RISK.md — CBUAE, PDPL, AECB regulatory framework
+
+
+
+\---
+
+
+
+Last Updated: July 2026
+
+Maintained By: Kunal Sharma — Financial Data Analyst
 
