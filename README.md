@@ -156,7 +156,13 @@ uae-finpay-bnpl-risk-python/
 
 ## Business Impact
 
-The model output is structured as an underwriting decision framework, not a standalone accuracy score. Expected Loss by tier lets a risk team quantify exposure in AED per risk band rather than treating default risk as one undifferentiated number. Net Customer Value answers the underwriting question that matters most: not whether a customer may default, but whether the segment remains profitable after expected loss is accounted for. The A/B test on credit score provides a data-backed assessment of whether the feature is worth the integration cost, including AECB access and compliance overhead, before committing to production.
+## Business Impact
+
+The model output is structured as an underwriting decision framework, not a standalone accuracy score:
+
+- Expected Loss by tier lets a risk team quantify exposure in AED per risk band rather than treating default risk as one undifferentiated number.
+- Net Customer Value answers the underwriting question that matters most: not whether a customer may default, but whether the segment remains profitable after expected loss is accounted for.
+- The A/B test on credit score provides a data-backed assessment of whether the feature is worth the integration cost, including AECB access and compliance overhead, before committing to production.
 
 ---
 
