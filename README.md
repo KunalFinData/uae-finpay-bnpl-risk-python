@@ -1,6 +1,8 @@
-# UAE FinPay—BNPL Default Risk Predictor & Expected Loss Model
+# UAE FinPay — BNPL Default Risk Predictor & Expected Loss Model
 
 UAE FinPay is a fictional company created for this portfolio to simulate a real-world credit risk analytics use case for a UAE fintech.
+
+---
 
 ## Executive Summary
 
