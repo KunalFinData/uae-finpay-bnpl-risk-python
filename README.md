@@ -1,5 +1,14 @@
 # UAE FinPay — BNPL Default Risk Predictor & Expected Loss Model
 
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![pandas](https://img.shields.io/badge/pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-Machine%20Learning-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Status](https://img.shields.io/badge/Status-Completed-success)](#)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+> A Python-based BNPL credit risk framework combining default prediction, Expected Loss, risk-tier segmentation, and customer profitability analysis for a UAE fintech use case.
+
 UAE FinPay is a fictional company created for this portfolio to simulate a real-world credit risk analytics use case for a UAE fintech.
 
 ---
