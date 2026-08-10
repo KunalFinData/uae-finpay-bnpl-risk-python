@@ -156,8 +156,6 @@ uae-finpay-bnpl-risk-python/
 
 ## Business Impact
 
-## Business Impact
-
 The model output is structured as an underwriting decision framework, not a standalone accuracy score:
 
 - Expected Loss by tier lets a risk team quantify exposure in AED per risk band rather than treating default risk as one undifferentiated number.
