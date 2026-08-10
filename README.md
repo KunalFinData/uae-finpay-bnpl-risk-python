@@ -17,7 +17,19 @@ UAE FinPay is a fictional company created for this portfolio to simulate a real-
 
 This project builds a BNPL credit risk framework for a UAE fintech using Python, pandas, scikit-learn, and Jupyter Notebook. It combines default prediction with Expected Loss and profitability analysis to support underwriting decisions.
 
-Rather than stopping at predicting default, the project estimates Expected Loss ((PD \times LGD \times EAD)) in AED, evaluates Net Customer Value, and compares machine learning models to identify an appropriate balance between predictive performance and explainability.
+Rather than stopping at predicting default, the framework estimates Expected Loss using:
+
+[
+Expected Loss = PD \times LGD \times EAD
+]
+
+where:
+
+- **PD:** Probability of Default
+- **LGD:** Loss Given Default
+- **EAD:** Exposure at Default
+
+The project also evaluates Net Customer Value and compares Logistic Regression with Random Forest to identify an appropriate balance between predictive performance, explainability, and regulatory defensibility.
 
 ## Key Findings
 
