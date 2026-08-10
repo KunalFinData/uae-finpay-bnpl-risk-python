@@ -54,15 +54,12 @@ The project also evaluates Net Customer Value and compares Logistic Regression w
 - [Business Objectives](#business-objectives)
 - [Data Lineage](#data-lineage)
 - [Tech Stack](#tech-stack)
-- [Skills Demonstrated](#skills-demonstrated)
 - [Success Metrics](#success-metrics)
 - [Executive Findings](#executive-findings)
 - [Key Analyses](#key-analyses)
 - [Model Performance](#model-performance)
 - [Business Impact](#business-impact)
 - [Business Recommendations](#business-recommendations)
-- [Explainability and Governance](#explainability-and-governance)
-- [How to Run](#how-to-run)
 - [Project Structure](#project-structure)
 - [Data Quality](#data-quality)
 - [Limitations](#limitations)
@@ -83,7 +80,9 @@ BNPL providers need more than a default probability score when making lending de
 - Which variables contribute most to model decisions.
 - Whether additional data sources justify their implementation cost.
 
-Without these insights, underwriting decisions rely primarily on intuition rather than measurable portfolio risk. This project builds a credit risk analytics framework that supports portfolio monitoring, underwriting strategy, and profitability analysis.
+Without these insights, underwriting decisions rely primarily on intuition rather than measurable portfolio risk.
+
+This project builds a credit risk analytics framework that supports portfolio monitoring, underwriting strategy, and profitability analysis.
 
 ---
 
@@ -274,6 +273,19 @@ See [`COMPLIANCE_CREDIT_RISK.md`](COMPLIANCE_CREDIT_RISK.md) for full CBUAE 2026
 
 ---
 
+## Quick Links
+
+Analysis Notebook
+Compliance Framework
+Data Dictionary
+Charts Folder
+
+---
+
+GitHub Profile
+Contact
+Kunal Sharma 
+GitHub Profile
 ## LinkedIn
 [Connect on LinkedIn](https://www.linkedin.com/in/kunalsharma0425)
 
