@@ -11,7 +11,7 @@
 
 UAE FinPay is a fictional company created for this portfolio to simulate a real-world credit risk analytics use case for a UAE fintech.
 
-**Built for:** Credit Risk Analyst, Financial Data Analyst, Risk Analytics Analyst, Product Analytics Analyst, and Fintech BI Analyst.
+**Built for:** fraud analytics, payment risk operations, and AML-adjacent roles in UAE fintechs and banks.
 
 ---
 
