@@ -224,10 +224,6 @@ See [`COMPLIANCE_CREDIT_RISK.md`](COMPLIANCE_CREDIT_RISK.md) for full CBUAE 2026
 
 ---
 
-## GitHub
-
-[View Repository](https://github.com/KunalFinData/uae-finpay-bnpl-risk-python)  
-
 ## LinkedIn
 [Connect on LinkedIn](https://www.linkedin.com/in/kunalsharma0425)
 
