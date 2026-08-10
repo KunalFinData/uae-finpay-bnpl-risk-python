@@ -275,33 +275,15 @@ See [`COMPLIANCE_CREDIT_RISK.md`](COMPLIANCE_CREDIT_RISK.md) for full CBUAE 2026
 
 ## Quick Links
 
-Analysis Notebook
-Compliance Framework
-Data Dictionary
-Charts Folder
-GitHub Repository
-GitHub Profile
+- [Analysis Notebook](notebooks/uae_finpay_bnpl_risk_analysis.ipynb)
+- [Compliance Framework](COMPLIANCE_CREDIT_RISK.md)
+- [Data Dictionary](data_dictionary.md)
+- [Charts Folder](charts/)
+- [GitHub Repository](https://github.com/KunalFinData/uae-finpay-bnpl-risk-python)
 
 ## Contact
-Kunal Sharma 
-GitHub Profile
 
+**Kunal Sharma**
 
-
-
-
-Analysis Notebook
-Compliance Framework
-Data Dictionary
-Charts Folder
-
----
-
-GitHub Profile
-Contact
-Kunal Sharma 
-GitHub Profile
-## LinkedIn
-[Connect on LinkedIn](https://www.linkedin.com/in/kunalsharma0425)
-
----
+- [GitHub Profile](https://github.com/KunalFinData)
+- [Connect on LinkedIn](https://www.linkedin.com/in/kunalsharma0425)
