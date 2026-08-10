@@ -11,6 +11,9 @@
 
 UAE FinPay is a fictional company created for this portfolio to simulate a real-world credit risk analytics use case for a UAE fintech.
 
+**Built for:** Credit Risk Analyst, Financial Data Analyst, Risk Analytics Analyst, Product Analytics Analyst, and Fintech BI Analyst.
+
+
 ---
 
 ## Executive Summary
@@ -40,7 +43,32 @@ The project also evaluates Net Customer Value and compares Logistic Regression w
 - The portfolio default rate was **8.8%** across **50,000 BNPL transactions**.
 - The framework demonstrates how credit risk analytics can support underwriting, portfolio monitoring, and profitability-based decision-making.
 
-Built for: BNPL underwriting, credit risk teams, and fintech analytics roles in UAE/GCC.
+---
+
+## Table of Contents
+
+- [Executive Summary](#executive-summary)
+- [Key Findings](#key-findings)
+- [Business Problem](#business-problem)
+- [Business Objectives](#business-objectives)
+- [Data Lineage](#data-lineage)
+- [Tech Stack](#tech-stack)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Success Metrics](#success-metrics)
+- [Executive Findings](#executive-findings)
+- [Key Analyses](#key-analyses)
+- [Model Performance](#model-performance)
+- [Business Impact](#business-impact)
+- [Business Recommendations](#business-recommendations)
+- [Explainability and Governance](#explainability-and-governance)
+- [How to Run](#how-to-run)
+- [Project Structure](#project-structure)
+- [Data Quality](#data-quality)
+- [Limitations](#limitations)
+- [Regulatory Framework](#regulatory-framework)
+- [Charts Preview](#charts-preview)
+- [Quick Links](#quick-links)
+- [Contact](#contact)
 
 ---
 
