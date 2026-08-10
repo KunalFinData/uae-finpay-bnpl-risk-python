@@ -132,7 +132,7 @@ GitHub (notebook, charts, compliance docs)
 
 ---
 
-## Success Metrics
+## Success Metrics 
 
 | KPI | Description | Business Use |
 |---|---|---|
