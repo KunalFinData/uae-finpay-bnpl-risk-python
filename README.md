@@ -13,7 +13,6 @@ UAE FinPay is a fictional company created for this portfolio to simulate a real-
 
 **Built for:** Credit Risk Analyst, Financial Data Analyst, Risk Analytics Analyst, Product Analytics Analyst, and Fintech BI Analyst.
 
-
 ---
 
 ## Executive Summary
@@ -33,6 +32,8 @@ where:
 - **EAD:** Exposure at Default
 
 The project also evaluates Net Customer Value and compares Logistic Regression with Random Forest to identify an appropriate balance between predictive performance, explainability, and regulatory defensibility.
+
+---
 
 ## Key Findings
 
