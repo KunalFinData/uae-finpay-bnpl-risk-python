@@ -33,10 +33,12 @@ The project also evaluates Net Customer Value and compares Logistic Regression w
 
 ## Key Findings
 
-- Logistic Regression achieves 0.7154 AUC-ROC, outperforming Random Forest (0.7020) on this dataset.
-- Medium-risk customers remain profitable after Expected Loss.
-- Adding credit score improves predictive performance with statistical significance.
-- The portfolio default rate is 8.8% across 50,000 BNPL transactions.
+
+- Logistic Regression achieved an AUC-ROC of **0.7154**, outperforming Random Forest at **0.7020** on this dataset.
+- Medium-risk customers remained profitable after Expected Loss was deducted.
+- Adding credit score improved predictive performance with statistical significance in the simulated A/B test.
+- The portfolio default rate was **8.8%** across **50,000 BNPL transactions**.
+- The framework demonstrates how credit risk analytics can support underwriting, portfolio monitoring, and profitability-based decision-making.
 
 Built for: BNPL underwriting, credit risk teams, and fintech analytics roles in UAE/GCC.
 
