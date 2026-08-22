@@ -22,7 +22,7 @@ This project builds a BNPL credit risk framework for a UAE fintech using Python,
 Rather than stopping at predicting default, the framework estimates Expected Loss using:
 
 [
-Expected Loss = = PD × LGD × EAD
+Expected Loss = PD × LGD × EAD
 ]
 
 where:
